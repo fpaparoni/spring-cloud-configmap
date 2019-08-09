@@ -1,0 +1,21 @@
+management:
+  endpoint:
+    restart.enabled : true
+    health.enabled : true
+    info.enabled : true
+
+spring:
+  application:
+    name: k8config
+  cloud:
+    kubernetes:
+      reload:
+        period: 1000
+        enabled: true
+      config:
+        enabled: true
+        name: k8config
+        namespace: default
+        sources:
+         # Spring Cloud Kubernetes looks up a ConfigMap named myk8config in namespace default
+         - name: myk8config

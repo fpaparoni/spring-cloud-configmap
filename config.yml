@@ -1,0 +1,11 @@
+apiVersion: v1 
+kind: ConfigMap
+metadata:
+  name: myk8config 
+data:
+  single.property: k8 configmap single property
+  application.properties: |-
+    myconfig.properties1=First property
+    myconfig.properties2=Second property
+    myconfig.subconfig.properties1=First sub property
+    myconfig.subconfig.properties2=Second sub property
